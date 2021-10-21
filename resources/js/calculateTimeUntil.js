@@ -1,16 +1,10 @@
 const calculateTimeUntil = (countdown) => {
-  const currentDate = Date.now(); //get current date (no. milliseconds since Jan 1 1970 00:00:00 UTC)
+  const currentDate = Date.now(); //get unix timestamp for current date/time)
+  const countdownDate = Date.parse(countdown.date + ' ' + countdown.time) //get unix timestamp for countdown date/time
 
-  const timeUntil = Math.floor((countdown.date - currentDate) / 1000); //calculate time until countdown date, in seconds
-  console.log(timeUntil);
+  const timeUntil = Math.floor((countdownDate - currentDate) / 1000); //calculate time (in seconds) until countdown date
 
   return timeUntil
 }
 
 export {calculateTimeUntil}
-
-// Currently the countdown passed in takes the below FormData, but this may be changed later
-// const Christmas = {
-//   name: 'Christmas',
-//   date: Date.parse('21 Dec 2021 00:00:00 GMT')
-// }

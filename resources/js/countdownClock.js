@@ -5,7 +5,8 @@ import {convertSecondsToDays} from './convertSecondsToDays.js';
 // ChristmasCountdown object for testing purposes
 const Christmas = {
   name: 'Christmas',
-  date: Date.parse('21 Dec 2021 00:00:00 GMT')
+  date: '21 Dec 2021',
+  time: '00:00:00'
 }
 
 // get seconds from now until countdown date
@@ -18,6 +19,7 @@ const clock = setInterval(() => {
   // display clock in the DOM
   document.getElementById('clock').innerHTML = timeUntil.days + 'd ' + timeUntil.hours + 'h ' + timeUntil.mins + 'm ' + timeUntil.secs + 's';
 
+  // remove one second
   secondsUntil -= 1;
 
   // display if the countdown has finished
