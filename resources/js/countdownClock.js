@@ -8,15 +8,19 @@ const Christmas = {
   date: Date.parse('21 Dec 2021 00:00:00 GMT')
 }
 
+// get seconds from now until countdown date
+let secondsUntil = calculateTimeUntil(Christmas);
 
+// initiate clock
 const clock = setInterval(() => {
-  const secondsUntil = calculateTimeUntil(Christmas);
   const timeUntil = convertSecondsToDays(secondsUntil);
 
   // display clock in the DOM
   document.getElementById('clock').innerHTML = timeUntil.days + 'd ' + timeUntil.hours + 'h ' + timeUntil.mins + 'm ' + timeUntil.secs + 's';
 
-  // show if the countdown has finished
+  secondsUntil -= 1;
+
+  // display if the countdown has finished
   if (secondsUntil < 0) {
     clearInterval(clock);
     document.getElementById('clock').innerHTML = 'Countdown Complete';
