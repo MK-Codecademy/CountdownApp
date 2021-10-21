@@ -1,58 +1,81 @@
 /*Global styles*/
 * {
-    margin: 0;
-    padding: 0;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-html {
-    width: 100%;
-    height: 100%;
-    display: table;
-    background-color: rgb(29, 23, 29);
-    background-image: url("./images/bg-stars.svg");
-    background-size: auto;
-    scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 @import url(https://fonts.google.com/specimen/Red+Hat+Text);
 
 body {
-    font-family: 'Red Hat Display', sans-serif;
-    font-size;: 14px;
-    color: white;
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(29, 23, 29);
+  background-image: url("./images/bg-stars.svg");
+  background-size: auto;
+  scroll-behavior: smooth;
+  font-family: 'Red Hat Display', sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
 }
-
-h1 {
-    padding-top: 10%;
-    font-size: 20px;
-    font-weight: 700;
-  }
 
 /* Colours */
 :root {
 --grayish-blue: hsl(237, 18%, 59%);
 --soft-red: hsl(345, 95%, 68%);
---dark-desaturated blue: hsl(236, 21%, 26%);
+--dark-desaturated-blue: hsl(236, 21%, 26%);
 --very-dark-blue: hsl(235, 16%, 14%);
---very-dark-blue: hsl(234, 17%, 12%);
+--very-dark-purple: hsl(234, 17%, 12%);
 --white-text: hsl(0, 0%, 100%);
 }
 
-/* Footer*/
-footer {
-    height: 100px;
-    margin-top: auto;
-    background-image: url("images/pattern-hills.svg");
-    background-size: cover;
-    text-align: center;
-    vertical-align: bottom;
+/*App*/
+.app {
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  color: white; /*this can be removed later*/
 }
 
+/*Sidebar*/
+aside {
+  width: 35vw;
+  height: 100vh;
+  background-color: rgb(47, 36, 57);
+}
+
+/*Main Countdown Area*/
+main {
+  width: 65vw;
+  height: 100vh;
+}
+
+/*Mobile page layout*/
+@media screen and (max-width: 800px) {
+  aside {
+    width: 100vw;
+    height: 100vh;
+    display: none; /*hidden for now*/
+  }
+
+  main {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+
+
+/* Footer*/
+footer {
+  height: 20vh;
+  margin-top: auto;
+  background-image: url("images/pattern-hills.svg");
+  background-size: cover;
+  text-align: center;
+  vertical-align: bottom;
+}
 
 /* Social icons*/
