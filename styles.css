@@ -34,8 +34,10 @@ body {
 /*App*/
 .app {
   position: fixed;
+  display: flex;
   width: 100vw;
   height: 100vh;
+  color: white; /*this can be removed later*/
 }
 
 /*Sidebar*/
