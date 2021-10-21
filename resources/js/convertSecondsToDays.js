@@ -10,5 +10,7 @@ const convertSecondsToDays = (seconds) => {
   const mins = Math.floor(seconds % oneHour / oneMin);
   const secs = Math.floor(seconds % oneMin);
 
-  return [days, hours, mins, secs];
+  return {days: days, hours: hours, mins: mins, secs: secs};
 }
+
+export {convertSecondsToDays};

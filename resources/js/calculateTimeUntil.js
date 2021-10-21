@@ -7,12 +7,10 @@ const calculateTimeUntil = (countdown) => {
   return timeUntil
 }
 
+export {calculateTimeUntil}
 
-
-// ChristmasCountdown object for testing purposes
-const Christmas = {
-  name: 'Christmas',
-  date: Date.parse('21 Oct 2021 11:48:00 GMT')
-}
-
-calculateTimeUntil(Christmas)
+// Currently the countdown passed in takes the below FormData, but this may be changed later
+// const Christmas = {
+//   name: 'Christmas',
+//   date: Date.parse('21 Dec 2021 00:00:00 GMT')
+// }
