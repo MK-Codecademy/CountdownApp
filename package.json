@@ -3,20 +3,22 @@
   "version": "1.0.0",
   "description": "![Design preview for the Launch countdown timer coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
+  "dependencies": {
+    "modern-normalize": "^1.1.0",
+    "normalize": "^0.3.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hyosssssun/CountdownApp.git"
+    "url": "git+https://github.com/MK-Codecademy/CountdownApp.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Hyosssssun/CountdownApp/issues"
+    "url": "https://github.com/MK-Codecademy/CountdownApp/issues"
   },
-  "homepage": "https://github.com/Hyosssssun/CountdownApp#readme",
-  "dependencies": {
-    "modern-normalize": "^1.1.0"
-  }
+  "homepage": "https://github.com/MK-Codecademy/CountdownApp#readme"
 }
