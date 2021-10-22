@@ -22,17 +22,26 @@
     <button id="toggle-overlay" onclick="toggleOverlay()">Press Me</button>
     <div id="overlay">
       <div id="edit-countdown-container" class="font-RedHatText-400">
-        <h1><strong>EDIT</strong><p> COUNTDOWN</p></h1>
+        <button class="closebutton" onclick="toggleOverlay()"><img src="images/times-solid.svg"></button>
+        <h1><strong>EDIT</strong><p>COUNTDOWN</p></h1>
         <form class="overlay-form" action="">
-          <label for="c-name">COUNTDOWN NAME</label><br>
-          <input type="text" id="c-name" name="c-name"><br>
-          <label for="c-date">COUNTDOWN DATE</label><br>
-          <input type="date" id="c-date" name="c-date"><br>
-          <label for="c-time">COUNTDOWN DATE</label><br>
-          <input type="time" id="c-time" name="c-time"><br>
-          <div class="button-wrapper">
-            <button class="cancel-button" type="button">CANCEL</button>
-            <input class="submit-button" type="submit" value="SAVE">
+          <div>
+            <label for="c-name">COUNTDOWN NAME</label>
+            <input type="text" id="c-name" name="c-name">
+          </div>
+          <div>
+            <label for="c-date">COUNTDOWN DATE</label>
+            <input type="date" id="c-date" name="c-date">
+          </div>
+          <div>
+            <label for="c-time">COUNTDOWN DATE</label>
+            <input type="time" id="c-time" name="c-time">
+          </div>
+          <div>
+            <div class="button-wrapper">
+              <button class="cancel-button" type="button">CANCEL</button>
+              <input class="submit-button" type="submit" value="SAVE">
+            </div>
           </div>
           <input type="submit" value="Delete">
       </form>

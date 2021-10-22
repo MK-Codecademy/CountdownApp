@@ -103,8 +103,8 @@ main {
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   background-color: rgb(47, 36, 57);
-  height: 60vh;
-  width: 35vw;
+  height: 80vh;
+  width: 45vw;
   box-shadow: 2px 10px 10px 2px rgb(29, 22, 35);
   display: flex;
   flex-direction: column;
@@ -114,11 +114,11 @@ main {
   letter-spacing: .4rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
-  font-size: 24px;
-  width: 80%;
-  margin: 40px auto 60px auto;
+  font-size: 2rem;
+  width: 75%;
+  margin: 70px auto 60px auto;
 }
 
 #edit-countdown-container strong {
@@ -126,8 +126,16 @@ main {
 }
 
 #edit-countdown-container p {
-  font-weight: 100;
+  font-weight: lighter;
   padding-left: 15px;
+}
+
+.closebutton {
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
 }
 
 .overlay-form {
@@ -135,8 +143,9 @@ main {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
-  width: 75%;
+  width: 70%;
   margin: 0 auto 30px auto;
+  text-align: left;
 }
 
 .overlay-form .cancel-button {
@@ -150,6 +159,7 @@ main {
   font-size: 24px;
   letter-spacing: .5rem;
   float: left;
+  height: 100%;
 }
 
 .overlay-form .submit-button {
@@ -164,28 +174,32 @@ main {
   letter-spacing: .5rem;
   float: right;
   height: 100%;
+  margin: 0px;
 }
 
 .overlay-form label {
-  padding-left: 20px;
+  padding-left: 25px;
   text-align: left;
   color: hsl(345, 95%, 68%);
-  letter-spacing: .5rem;
-  font-size: 14px;
+  letter-spacing: .6rem;
+  font-size: 16px;
   font-family: 'Red Hat Text', sans-serif;
   font-weight: 700;
 }
 
 .overlay-form input {
-  border-radius: 25px;
-  height: 40px;
+  border-radius: 30px;
+  height: 50px;
   background-color: rgb(52, 54, 80);
   color: white;
-  padding: 0px 20px;
+  padding: 0px 25px;
   font-family: 'Red Hat Text', sans-serif;
   font-weight: 400;
   font-size: 14px;
   border: none;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 
