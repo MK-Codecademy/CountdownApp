@@ -83,6 +83,111 @@ main {
   }
 }
 
+/* Overlay */
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(47, 36, 57, .5);
+}
+
+#edit-countdown-container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  background-color: rgb(47, 36, 57);
+  height: 60vh;
+  width: 35vw;
+  box-shadow: 2px 10px 10px 2px rgb(29, 22, 35);
+  display: flex;
+  flex-direction: column;
+}
+
+#edit-countdown-container h1 {
+  letter-spacing: .4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  font-size: 24px;
+  width: 80%;
+  margin: 40px auto 60px auto;
+}
+
+#edit-countdown-container strong {
+  font-weight: 700;
+}
+
+#edit-countdown-container p {
+  font-weight: 100;
+  padding-left: 15px;
+}
+
+.overlay-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 75%;
+  margin: 0 auto 30px auto;
+}
+
+.overlay-form .cancel-button {
+  border: 2px solid hsl(345, 95%, 68%);
+  color: hsl(345, 95%, 68%);
+  background-color: rgb(47, 36, 57);
+  padding: 10px;
+  border-radius: 10px;
+  width: 47.5%;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: .5rem;
+  float: left;
+}
+
+.overlay-form .submit-button {
+  border: 2px solid hsl(345, 95%, 68%);
+  color: white;
+  background-color: hsl(345, 95%, 68%);
+  padding: 10px;
+  border-radius: 10px;
+  width: 47.5%;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: .5rem;
+  float: right;
+  height: 100%;
+}
+
+.overlay-form label {
+  padding-left: 20px;
+  text-align: left;
+  color: hsl(345, 95%, 68%);
+  letter-spacing: .5rem;
+  font-size: 14px;
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 700;
+}
+
+.overlay-form input {
+  border-radius: 25px;
+  height: 40px;
+  background-color: rgb(52, 54, 80);
+  color: white;
+  padding: 0px 20px;
+  font-family: 'Red Hat Text', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  border: none;
+}
+
 
 /* Footer*/
 footer {
