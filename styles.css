@@ -96,16 +96,7 @@ main {
   background-color: rgb(47, 36, 57, .5);
 }
 
-/* Edit Countdown  ec-*/
-@media screen and (min-width: 990px) {
-  #ec-container {
-    height: 70vh;
-    width: 50vw;
-    max-width: 650px;
-  }
-}
-
-
+/* Edit Countdown Start  ec-*/
 #ec-container{
   position: absolute;
   top: 50%;
@@ -116,6 +107,51 @@ main {
   box-shadow: 2px 10px 10px 2px rgb(29, 22, 35);
   display: none;
   flex-direction: column;
+}
+
+@media screen and (min-width: 1030px) {
+  #ec-container {
+    height: 70vh;
+    width: 50vw;
+    max-width: 650px;
+  }
+  .ec-overlay-form {
+    justify-content: space-between;
+    width: 70%;
+  }
+  .ec-mobileclosebutton {
+    display: none
+  }
+}
+
+@media screen and (min-width: 735px) and (max-width: 1030px) {
+  #ec-container {
+    height: 70vh;
+    width: 70vw;
+    max-width: 650px;
+  }
+  .ec-overlay-form {
+    justify-content: space-between;
+    width: 70%;
+  }
+  .ec-mobileclosebutton {
+    display: none
+  }
+}
+
+@media screen and (max-width: 735px) {
+  #ec-container {
+    height: 100vh;
+    width: 100vw;
+    padding: 5vh 0 12vh 0;
+  }
+  .ec-overlay-form {
+    justify-content: space-evenly;
+    width: 90%;
+  }
+  .ec-desktopclosebutton {
+    display: none
+  }
 }
 
 #ec-container h1 {
@@ -138,7 +174,15 @@ main {
   padding-left: 15px;
 }
 
-.ec-closebutton {
+.ec-overlay-form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0 auto 30px auto;
+  text-align: left;
+}
+
+.ec-desktopclosebutton {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -146,21 +190,24 @@ main {
   border: none;
   margin: 0;
 }
-
-.ec-closebutton img {
+.ec-desktopclosebutton img {
   filter: invert(56%) sepia(12%) saturate(804%) hue-rotate(199deg) brightness(93%) contrast(82%);
   height: 40px;
   width: 40px;
 }
 
-.ec-overlay-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  width: 70%;
-  margin: 0 auto 30px auto;
-  text-align: left;
+.ec-mobileclosebutton {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  background-color: rgb(47, 36, 57);
+  border: none;
+  margin: 0;
+}
+.ec-mobileclosebutton img {
+  filter: invert(56%) sepia(12%) saturate(804%) hue-rotate(199deg) brightness(93%) contrast(82%);
+  height: 40px;
+  width: 40px;
 }
 
 .ec-deletebutton {
@@ -195,7 +242,7 @@ main {
   border-radius: 10px;
   width: 47.5%;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.4rem;
   letter-spacing: .5rem;
   float: left;
   height: 100%;
@@ -209,7 +256,7 @@ main {
   border-radius: 10px;
   width: 47.5%;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 1.4rem;
   letter-spacing: .5rem;
   float: right;
   height: 100%;
@@ -217,7 +264,7 @@ main {
 }
 
 .ec-overlay-form label {
-  padding-left: 25px;
+  padding-left: 15px;
   text-align: left;
   color: hsl(345, 95%, 68%);
   letter-spacing: .6rem;
@@ -227,7 +274,7 @@ main {
 }
 
 .ec-overlay-form input {
-  border-radius: 30px;
+  border-radius: 15px;
   height: 50px;
   background-color: rgb(52, 54, 80);
   color: white;
@@ -240,6 +287,8 @@ main {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
+/* Edit Countdown End  ec-*/
 
 
 /* Footer*/
