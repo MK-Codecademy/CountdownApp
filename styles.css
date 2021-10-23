@@ -63,6 +63,51 @@ aside {
   background-color: rgb(47, 36, 57);
 }
 
+.white-header {
+  color: var(--white-text)
+}
+
+.credentials  {
+  color: var(--soft-red);
+  letter-spacing: 4px;
+  font-size: 10px;
+  padding-left: 10px;
+}
+
+#sign-up-sidebar  {
+  margin: 200px 50px 50px 50px;
+}
+
+#sign-up-form {
+  width: 100%;
+}
+
+.form-field {
+  width: 80%;
+  margin: auto;
+  padding: 10px;
+  text-align: left;
+}
+
+.form-field input {
+  background-color: var(--dark-desaturated-blue);
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+}
+
+#sign-up-button {
+  background-color: var(--soft-red);
+  border: none;
+  border-radius: 5px;
+  padding: 5px 25px 5px 25px;
+  margin-top: 20px;
+  color: var(--white-text);
+  font-size: 12px;
+  letter-spacing: 4px;
+  box-shadow: 1px 2px black;
+}
+
 /*Main Countdown Area*/
 main {
   width: 65vw;
