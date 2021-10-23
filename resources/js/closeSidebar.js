@@ -1,15 +1,14 @@
-function openSidebar() {
-  document.getElementById("sidebar").style.width = "35vw";
-  document.getElementById("main").style.width = "65vw";
+const sidebar = document.getElementById('sidebar');
+const main = document.getElementById('main');
+
+const openAndCloseSidebar = () => {
+  sidebar.classList.toggle("open");
+  sidebar.classList.toggle("closed");
+
+  main.classList.toggle("open");
+  main.classList.toggle("closed");
 }
 
-function closeSidebar() {
-  document.getElementById("sidebar").style.width = "0";
-  document.getElementById("main").style.width = "100vw";
-}
 
-openSidebarBtn = document.getElementById('sidebar-open-btn');
-closeSidebarBtn = document.getElementById('sidebar-close-btn');
-
-openSidebarBtn.onclick = openSidebar
-closeSidebarBtn.onclick = closeSidebar;
+document.getElementById('sidebar-open-btn').onclick = openAndCloseSidebar;
+document.getElementById('sidebar-close-btn').onclick = openAndCloseSidebar;
