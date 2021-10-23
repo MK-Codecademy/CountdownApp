@@ -19,37 +19,44 @@
       <div>Your sidebar will go in this div</div>
     </aside>
 
-    <button id="toggle-overlay" onclick="toggleOverlay()">Press Me</button>
-    <div id="overlay">
-      <div id="edit-countdown-container" class="font-RedHatText-400">
-        <button class="closebutton" onclick="toggleOverlay()"><img src="images/times-solid.svg"></button>
-        <h1><strong>EDIT</strong><p>COUNTDOWN</p></h1>
-        <form class="overlay-form" action="">
-          <div>
-            <label for="c-name">COUNTDOWN NAME</label>
-            <input type="text" id="c-name" name="c-name">
-          </div>
-          <div>
-            <label for="c-date">COUNTDOWN DATE</label>
-            <input type="date" id="c-date" name="c-date">
-          </div>
-          <div>
-            <label for="c-time">COUNTDOWN DATE</label>
-            <input type="time" id="c-time" name="c-time">
-          </div>
-          <div>
-            <div class="button-wrapper">
-              <button class="cancel-button" type="button">CANCEL</button>
-              <input class="submit-button" type="submit" value="SAVE">
-            </div>
-          </div>
-          <input type="submit" value="Delete">
-      </form>
-     </div>
+    <section>
+      <div id="overlay">
+        <!-- This is the overlay, add any components here to display on overlay from the overlay folder.  You can show/hide the component you want using the overlay.js -->
+        <div id="ec-overlay">
+          <div id="ec-container" class="font-RedHatText-400">
+            <button class="ec-closebutton" onclick="toggleOverlay('ec-container')"><img src="images/close-icon.svg"></button>
+            <h1><strong>EDIT</strong><p>COUNTDOWN</p></h1>
+            <form class="ec-overlay-form" action="">
+              <div>
+                <label for="c-name">COUNTDOWN NAME</label>
+                <input type="text" id="c-name" name="c-name">
+              </div>
+              <div>
+                <label for="c-date">COUNTDOWN DATE</label>
+                <input type="date" id="c-date" name="c-date">
+              </div>
+              <div>
+                <label for="c-time">COUNTDOWN DATE</label>
+                <input type="time" id="c-time" name="c-time">
+              </div>
+              <div>
+                <div class="ec-button-wrapper">
+                  <button class="ec-cancel-button" type="button">CANCEL</button>
+                  <input class="ec-submit-button" type="submit" value="SAVE">
+                </div>
+              </div>
+          </form>
+          <a class="ec-deletebutton" href="#"><img src="images/icon-delete.svg"><p>delete</p></a>
+         </div>
+      </div>
     </div>
+
+    </section>
+
     <!--The main section will hold the clock, header, etc-->
     <main>
       <p>The rest of the page will go inside here. You can delete this p tag</p>
+      <button onclick="toggleOverlay('ec-container', 'flex')">Press Me</button>
     </main>
   </div>  
   <script src="./resources/js/overlay.js"></script>

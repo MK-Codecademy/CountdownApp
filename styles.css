@@ -96,21 +96,29 @@ main {
   background-color: rgb(47, 36, 57, .5);
 }
 
-#edit-countdown-container{
+/* Edit Countdown  ec-*/
+@media screen and (min-width: 990px) {
+  #ec-container {
+    height: 70vh;
+    width: 50vw;
+    max-width: 650px;
+  }
+}
+
+
+#ec-container{
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   -ms-transform: translate(-50%,-50%);
   background-color: rgb(47, 36, 57);
-  height: 80vh;
-  width: 45vw;
   box-shadow: 2px 10px 10px 2px rgb(29, 22, 35);
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 
-#edit-countdown-container h1 {
+#ec-container h1 {
   letter-spacing: .4rem;
   display: flex;
   flex-direction: row;
@@ -121,24 +129,31 @@ main {
   margin: 70px auto 60px auto;
 }
 
-#edit-countdown-container strong {
+#ec-container strong {
   font-weight: 700;
 }
 
-#edit-countdown-container p {
+#ec-container p {
   font-weight: lighter;
   padding-left: 15px;
 }
 
-.closebutton {
-  height: 40px;
-  width: 40px;
+.ec-closebutton {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 20px;
+  top: 20px;
+  background-color: rgb(47, 36, 57);
+  border: none;
+  margin: 0;
 }
 
-.overlay-form {
+.ec-closebutton img {
+  filter: invert(56%) sepia(12%) saturate(804%) hue-rotate(199deg) brightness(93%) contrast(82%);
+  height: 40px;
+  width: 40px;
+}
+
+.ec-overlay-form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -148,7 +163,31 @@ main {
   text-align: left;
 }
 
-.overlay-form .cancel-button {
+.ec-deletebutton {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  margin: 0 auto 20px auto;
+  background-color: rgb(47, 36, 57);
+  color: white;
+  border: 0;
+  text-decoration: none;
+}
+
+.ec-deletebutton p {
+  padding-left: 2.5px;
+  letter-spacing: 0.1rem;
+  color: white;
+  font-size: 20px;
+}
+
+.ec-deletebutton img {
+  padding-right: 2.5px;
+}
+
+.ec-overlay-form .ec-cancel-button {
   border: 2px solid hsl(345, 95%, 68%);
   color: hsl(345, 95%, 68%);
   background-color: rgb(47, 36, 57);
@@ -162,7 +201,7 @@ main {
   height: 100%;
 }
 
-.overlay-form .submit-button {
+.ec-overlay-form .ec-submit-button {
   border: 2px solid hsl(345, 95%, 68%);
   color: white;
   background-color: hsl(345, 95%, 68%);
@@ -177,7 +216,7 @@ main {
   margin: 0px;
 }
 
-.overlay-form label {
+.ec-overlay-form label {
   padding-left: 25px;
   text-align: left;
   color: hsl(345, 95%, 68%);
@@ -187,7 +226,7 @@ main {
   font-weight: 700;
 }
 
-.overlay-form input {
+.ec-overlay-form input {
   border-radius: 30px;
   height: 50px;
   background-color: rgb(52, 54, 80);
