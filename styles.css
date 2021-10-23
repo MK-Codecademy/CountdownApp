@@ -19,6 +19,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* Colours */
@@ -61,12 +62,50 @@ aside {
   width: 35vw;
   height: 100vh;
   background-color: rgb(47, 36, 57);
+  position: relative;
+  transition: 0.8s;
+  overflow-x: hidden;
+  z-index: 1;
+}
+
+.sidebar-content {
+  margin-top: 100px;
+  min-width: 35vw;
+}
+
+.open-close-btn {
+  width: 50px;
+  height: 50px;
+  top: 15px;
+}
+
+.open-close-btn:hover {
+  cursor: pointer;
+}
+
+#sidebar-close-btn {
+  position: absolute;
+  right: 15px;
+}
+
+#sidebar-open-btn {
+  position: fixed;
+  left: 15px;
+}
+
+#sidebar-close-btn:hover {
+  right: 20px;
+}
+
+#sidebar-open-btn:hover {
+  left: 20px;
 }
 
 /*Main Countdown Area*/
 main {
   width: 65vw;
   height: 100vh;
+  transition: 0.8s;
 }
 
 /*Mobile page layout*/

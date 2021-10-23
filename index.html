@@ -15,12 +15,14 @@
 <body>
   <div class="app">
     <!--The aside is for the sidebar. The actual content will sit inside the div within the aside.-->
-    <aside class="sidebar">
-      <div>Your sidebar will go in this div</div>
+    <aside id="sidebar">
+      <img src="./images/icon-dbl-left.svg" alt="close icon" id="sidebar-close-btn" class="open-close-btn" />
+      <div class="sidebar-content">Your sidebar will go in this div</div>
     </aside>
+    <img src="./images/icon-dbl-right.svg" alt="open icon" id="sidebar-open-btn" class="open-close-btn" />
     
     <!--The main section will hold the clock, header, etc-->
-    <main>
+    <main id="main">
       <p>The rest of the page will go inside here. You can delete this p tag</p>
     </main>
   </div>
@@ -33,5 +35,7 @@
       <img src="./images/icon-instagram.svg"/>
     </div>
   </footer>
+
+  <script src="./resources/js/closeSidebar.js"></script>
 </body>
 </html>
