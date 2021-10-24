@@ -19,6 +19,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 /* Colours */
@@ -56,13 +57,53 @@ body {
   color: white; /*this can be removed later*/
 }
 
-/*Sidebar*/
+/*#region Sidebar*/
 aside {
-  width: 35vw;
+  width: 0vw;
   height: 100vh;
   background-color: rgb(47, 36, 57);
+  position: relative;
+  transition: 0.8s;
+  overflow-x: hidden;
+  z-index: 1;
 }
 
+aside.open {
+  width: 35vw;
+}
+
+aside .content {
+  margin-top: 100px;
+  min-width: 35vw;
+}
+
+.open-close-btn {
+  width: 50px;
+  height: 50px;
+  top: 15px;
+}
+.open-close-btn:hover {
+  cursor: pointer;
+}
+
+#sidebar-close-btn {
+  position: absolute;
+  right: 15px;
+}
+#sidebar-close-btn:hover {
+  right: 20px;
+}
+
+#sidebar-open-btn {
+  position: fixed;
+  left: 15px;
+}
+#sidebar-open-btn:hover {
+  left: 20px;
+}
+/*#endregion*/
+
+/*#region signup_side*/
 .white-header {
   color: var(--white-text)
 }
@@ -107,29 +148,43 @@ aside {
   letter-spacing: 4px;
   box-shadow: 1px 2px black;
 }
+/*#endregion*/
 
-/*Main Countdown Area*/
+/*#region Main Countdown Area*/
+
 main {
-  width: 65vw;
+  width: 100vw;
   height: 100vh;
+  transition: 0.8s;
+  overflow-x: hidden;
 }
 
-/*Mobile page layout*/
+main.open {
+  width: 65vw;
+}
+/*#endregion*/
+
+/*#region Mobile page layout*/
 @media screen and (max-width: 800px) {
-  aside {
+  aside.open {
     width: 100vw;
-    height: 100vh;
-    display: none; /*hidden for now*/
   }
 
-  main {
-    width: 100vw;
-    height: 100vh;
+  aside .content {
+    min-width: 100vw;
+  }
+
+  main .content {
+    min-width: 100vw;
+  }
+
+  main.open {
+    width: 0vw;
   }
 }
+/*#endregion*/
 
-
-/* Footer*/
+/*#region Footer*/
 footer {
   height: 20vh;
   margin-top: auto;
@@ -138,5 +193,7 @@ footer {
   text-align: center;
   vertical-align: bottom;
 }
+/*#endregion*/
+
 
 /* Social icons*/
