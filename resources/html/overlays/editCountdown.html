@@ -1,0 +1,28 @@
+<div id="ec-overlay">
+    <div id="ec-container" class="font-RedHatText-400">
+        <button class="ec-desktopclosebutton" onclick="toggleOverlay('ec-container')"><img src="images/close-icon.svg"></button>
+        <button class="ec-mobileclosebutton" onclick="toggleOverlay('ec-container')"><img src="images/icon-back.svg"></button>
+        <h1><strong>EDIT</strong><p>COUNTDOWN</p></h1>
+            <form class="ec-overlay-form" action="">
+                <div>
+                    <label for="c-name">COUNTDOWN NAME</label>
+                    <input type="text" id="c-name" name="c-name">
+                </div>
+                <div>
+                    <label for="c-date">COUNTDOWN DATE</label>
+                    <input type="date" id="c-date" name="c-date">
+                </div>
+                <div>
+                    <label for="c-time">COUNTDOWN DATE</label>
+                    <input type="time" id="c-time" name="c-time">
+                </div>
+                <div>
+                    <div class="ec-button-wrapper">
+                        <button class="ec-cancel-button" type="button">CANCEL</button>
+                        <input class="ec-submit-button" type="submit" value="SAVE">
+                    </div>
+                </div>
+            </form>
+        <a class="ec-deletebutton" href="#"><img src="images/icon-delete.svg"><p>delete</p></a>
+    </div>
+</div>
