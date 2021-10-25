@@ -1,0 +1,13 @@
+install Python:
+https://www.python.org/downloads/
+
+install flask
+we use pip for this which is a package manager for python, like npm for node.js
+open a terminal
+pip install flask
+
+open the flask_backend directory in VS code
+run the app with the command
+python FILENAME (countdown.py)
+the default web server runs on port 5000
+navigate to http://localhost:5000/ to see it in action

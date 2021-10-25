@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Countdown Timer</title>
+
+  <!--Stylesheet-->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <!--The aside is for the sidebar. The actual content will sit inside the div within the aside.-->
+    <aside id="sidebar" class="open">
+      <img src="./images/icon-dbl-left.svg" alt="close icon" id="sidebar-close-btn" class="open-close-btn" />
+      <div class="content">Your sidebar will go in this div</div>
+    </aside>
+    <img src="./images/icon-dbl-right.svg" alt="open icon" id="sidebar-open-btn" class="open-close-btn" />
+    
+    <section>
+      <div id="overlay">
+        <!-- This is the overlay, add any components here to display on overlay from the overlay folder.  You can show/hide the component you want using the overlay.js -->
+        
+      </div>
+    </section>
+    
+    <!--The main section will hold the clock, header, etc-->
+    <main id="main" class="open">
+      <p class="content">The rest of the page will go inside here. You can delete this p tag</p>
+    </main>
+  </div>  
+  <script src="./resources/js/overlay.js"></script>
+  <!-- Footer social icons-->
+  <footer>
+    <div class="social-icons">
+      <img src="./images/icon-facebook.svg"/>
+      <img src="./images/icon-pinterest.svg"/>
+      <img src="./images/icon-instagram.svg"/>
+    </div>
+  </footer>
+
+  <script src="./resources/js/closeSidebar.js"></script>
+</body>
+</html>
