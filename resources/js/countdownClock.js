@@ -1,6 +1,11 @@
-import {calculateTimeUntil} from './calculateTimeUntil.js';
+import {calculateTimeUntil} from './modules/calculateTimeUntil.js';
 import {convertSecondsToDays} from './convertSecondsToDays.js';
 
+// DOM elements for days, hours, mins and secs
+const daysEl = document.getElementById('days');
+const hoursEl = document.getElementById('hours');
+const minsEl = document.getElementById('mins');
+const secsEl = document.getElementById('secs');
 
 // ChristmasCountdown object for testing purposes
 const Christmas = {
@@ -17,16 +22,19 @@ const clock = setInterval(() => {
   const timeUntil = convertSecondsToDays(secondsUntil);
 
   // display clock in the DOM
-  document.getElementById('clock').innerHTML = timeUntil.days + 'd ' + timeUntil.hours + 'h ' + timeUntil.mins + 'm ' + timeUntil.secs + 's';
+  daysEl.innerHTML = timeUntil.days;
+  hoursEl.innerHTML = timeUntil.hours;
+  minsEl.innerHTML = timeUntil.mins;
+  secsEl.innerHTML = timeUntil.secs;
 
   // remove one second
   secondsUntil -= 1;
 
   // display if the countdown has finished
-  if (secondsUntil < 0) {
-    clearInterval(clock);
-    document.getElementById('clock').innerHTML = 'Countdown Complete';
-  }
+  // if (secondsUntil < 0) {
+  //   clearInterval(clock);
+  //   document.getElementById('clock').innerHTML = 'Countdown Complete';
+  // }
 }, 1000);
 
 
