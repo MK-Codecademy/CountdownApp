@@ -1,17 +1,25 @@
-<div id="sign-in-sidebar" class="content">
-    <p>Sign in to your account to<br>
+<div class="content" id="sign-in-sidebar">
+    <p class='sign-in'>Sign in to your account to<br>
     access <strong>full features</strong></p>
 
     <form action="">
-        <label for="username">USERNAME</label><br>
-        <input type="text" id="username" name="username"><br>
-        <label for="password">PASSWORD</label><br>
-        <input type="text" id="password" name="password"><br>
+      <div class="form_wrapper">
+        <label for="username" class="form_label font-RedHatText-400">USERNAME</label><br>
+        <input type="text" class="form_input" id="username" name="username" value='SuperUser1'><br>
+      </div>
+      <div class="form_wrapper">
+        <label for="password" class="form_label font-RedHatText-400">PASSWORD</label><br>
+        <input type="text" class="form_input" id="password" name="password" value="*********"><br>
+      </div>
+      <div id="sign_in_button">
         <button type="submit">SIGN IN</button>
+      </div>
     </form>
 
     <form action="">
+      <div id="sign_up_button">
         <button type="submit">SIGN UP</button>
+      </div>
     </form>
     
     <a href="">CONTINUE AS GUEST</a>

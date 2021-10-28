@@ -8,6 +8,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   width: 100vw;
   height: 100vh;
@@ -101,6 +102,47 @@ aside .content {
   left: 20px;
 }
 /*#endregion*/
+
+/* SIGN IN SIDEBAR */
+
+#sidebar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-in {
+  margin-bottom: 2rem;
+}
+
+#sign-in-sidebar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.form_label {
+  color: var(--soft-red);
+}
+
+.form_input {
+  background-color: var(--dark-desaturated-blue);
+  color: #fff;
+  padding: 0.2rem 0.5rem;
+border-radius: 10px;
+-webkit-appearance: none;
+
+}
+
+
 
 /*#region signup_side*/
 .white-header {
