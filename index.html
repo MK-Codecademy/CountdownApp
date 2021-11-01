@@ -10,6 +10,7 @@
 
   <!--Stylesheet-->
   <link rel="stylesheet" href="styles.css" />
+
 </head>
 
 <body>
@@ -17,7 +18,10 @@
     <!--The aside is for the sidebar. The actual content will sit inside the div within the aside.-->
     <aside id="sidebar" class="open">
       <img src="./images/icon-dbl-left.svg" alt="close icon" id="sidebar-close-btn" class="open-close-btn" />
-      <div>Your sidebar goes in this div</div>
+      <div>Your sidebar goes in this div
+        <br>
+        <button id="toggle-overlay" onclick="toggleOverlay('ec-container', 'flex')">Edit Countdown</button>
+      </div>
     
     </aside>
     <img src="./images/icon-dbl-right.svg" alt="open icon" id="sidebar-open-btn" class="open-close-btn" />
@@ -25,16 +29,105 @@
     <section>
       <div id="overlay">
         <!-- This is the overlay, add any components here to display on overlay from the overlay folder.  You can show/hide the component you want using the overlay.js -->
-        
+        <div id="ec-overlay">
+          <div id="ec-container" class="font-RedHatText-400">
+              <button class="ec-desktopclosebutton" onclick="toggleOverlay('ec-container')"><img src="images/close-icon.svg"></button>
+              <button class="ec-mobileclosebutton" onclick="toggleOverlay('ec-container')"><img src="images/icon-back.svg"></button>
+              <h1><strong>EDIT</strong><p>COUNTDOWN</p></h1>
+                  <form class="ec-overlay-form" action="">
+                      <div>
+                          <label for="c-name">COUNTDOWN NAME</label>
+                          <input type="text" id="c-name" name="c-name">
+                      </div>
+                      <div>
+                          <label for="c-date">COUNTDOWN DATE</label>
+                          <input type="date" id="c-date" name="c-date">
+                      </div>
+                      <div>
+                          <label for="c-time">COUNTDOWN DATE</label>
+                          <input type="time" id="c-time" name="c-time">
+                      </div>
+                      <div>
+                          <div class="ec-button-wrapper">
+                              <button class="ec-cancel-button" type="button">CANCEL</button>
+                              <input class="ec-submit-button" type="submit" value="SAVE">
+                          </div>
+                      </div>
+                  </form>
+              <a class="ec-deletebutton" href="#"><img src="images/icon-delete.svg"><p>delete</p></a>
+          </div>
+      </div>
       </div>
     </section>
-    
+
     <!--The main section will hold the clock, header, etc-->
     <main id="main" class="open">
-      <p class="content">The rest of the page will go inside here. You can delete this p tag</p>
+
+      <h1>We're launching soon</h1>
+
+      <div class="countdown">
+
+        <div class="countdown-block">
+          <span class="days time-elem">
+            <span class="top"></span>
+            <span class="top-back">
+              <span></span>
+            </span>
+            <span class="bottom"></span>
+            <span class="bottom-back">
+              <span></span>
+            </span>
+          </span>
+          <span class="title">Days</span>
+        </div>
+
+        <div class="countdown-block">
+          <span class="hours time-elem">
+            <span class="top"></span>
+            <span class="top-back">
+              <span></span>
+            </span>
+            <span class="bottom"></span>
+            <span class="bottom-back">
+              <span></span>
+            </span>
+          </span>
+          <span class="title">Hours</span>
+        </div>
+
+        <div class="countdown-block">
+          <span class="minutes time-elem">
+            <span class="top"></span>
+            <span class="top-back">
+              <span></span>
+            </span>
+            <span class="bottom"></span>
+            <span class="bottom-back">
+              <span></span>
+            </span>
+          </span>
+          <span class="title">Minutes</span>
+        </div>
+
+        <div class="countdown-block">
+          <span class="seconds time-elem">
+            <span class="top"></span>
+            <span class="top-back">
+              <span></span>
+            </span>
+            <span class="bottom"></span>
+            <span class="bottom-back">
+              <span></span>
+            </span>
+          </span>
+          <span class="title">Seconds</span>
+        </div>
+
+    </div>
+
+
     </main>
-  </div>  
-  <script src="./resources/js/overlay.js"></script>
+  </div>
   
   <!-- Footer social icons-->
   <footer>
@@ -46,5 +139,10 @@
   </footer>
 
   <script src="./resources/js/closeSidebar.js"></script>
+  <script src="./resources/js/overlay.js"></script>
+  <script src="./resources/js/countdownClock.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+
+
 </body>
 </html>
