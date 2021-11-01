@@ -18,7 +18,10 @@
     <!--The aside is for the sidebar. The actual content will sit inside the div within the aside.-->
     <aside id="sidebar" class="open">
       <img src="./images/icon-dbl-left.svg" alt="close icon" id="sidebar-close-btn" class="open-close-btn" />
-      <div>Your sidebar goes in this div</div>
+      <div>Your sidebar goes in this div
+        <br>
+        <button id="toggle-overlay" onclick="toggleOverlay('ec-container', 'flex')">Edit Countdown</button>
+      </div>
     
     </aside>
     <img src="./images/icon-dbl-right.svg" alt="open icon" id="sidebar-open-btn" class="open-close-btn" />
@@ -26,7 +29,34 @@
     <section>
       <div id="overlay">
         <!-- This is the overlay, add any components here to display on overlay from the overlay folder.  You can show/hide the component you want using the overlay.js -->
-        
+        <div id="ec-overlay">
+          <div id="ec-container" class="font-RedHatText-400">
+              <button class="ec-desktopclosebutton" onclick="toggleOverlay('ec-container')"><img src="images/close-icon.svg"></button>
+              <button class="ec-mobileclosebutton" onclick="toggleOverlay('ec-container')"><img src="images/icon-back.svg"></button>
+              <h1><strong>EDIT</strong><p>COUNTDOWN</p></h1>
+                  <form class="ec-overlay-form" action="">
+                      <div>
+                          <label for="c-name">COUNTDOWN NAME</label>
+                          <input type="text" id="c-name" name="c-name">
+                      </div>
+                      <div>
+                          <label for="c-date">COUNTDOWN DATE</label>
+                          <input type="date" id="c-date" name="c-date">
+                      </div>
+                      <div>
+                          <label for="c-time">COUNTDOWN DATE</label>
+                          <input type="time" id="c-time" name="c-time">
+                      </div>
+                      <div>
+                          <div class="ec-button-wrapper">
+                              <button class="ec-cancel-button" type="button">CANCEL</button>
+                              <input class="ec-submit-button" type="submit" value="SAVE">
+                          </div>
+                      </div>
+                  </form>
+              <a class="ec-deletebutton" href="#"><img src="images/icon-delete.svg"><p>delete</p></a>
+          </div>
+      </div>
       </div>
     </section>
 
@@ -108,7 +138,6 @@
     </div>
   </footer>
 
-  <script src="./resources/js/flippingCountdown.js"></script>
   <script src="./resources/js/closeSidebar.js"></script>
   <script src="./resources/js/overlay.js"></script>
   <script src="./resources/js/countdownClock.js"></script>

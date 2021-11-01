@@ -44,7 +44,7 @@ const Christmas = {
 // get seconds from now until countdown date
 let secondsUntil = calculateTimeUntil(Christmas);
 
-
+// flipping animation using greensock
 function animateFlip(element, value) {
 
   element.querySelector('.top-back span').innerText = value;
@@ -72,21 +72,25 @@ function animateFlip(element, value) {
 }
 
 // initiate clock
-const clock = setInterval(() => {
-  const timeUntil = convertSecondsToDays(secondsUntil);
+function init() {
+  const clock = setInterval(() => {
+    const timeUntil = convertSecondsToDays(secondsUntil);
+  
+    // display clock in the DOM
+    animateFlip(days, timeUntil.days);
+    animateFlip(hours, timeUntil.hours);
+    animateFlip(minutes, timeUntil.mins);
+    animateFlip(seconds, timeUntil.secs);
+  
+    // remove one second
+    secondsUntil -= 1;
+  
+    // display if the countdown has finished
+    if (secondsUntil < 0) {
+       clearInterval(clock);
+       document.getElementById('clock').innerHTML = 'Countdown Complete';
+    }
+  }, 1000);
+}
 
-  // display clock in the DOM
-  animateFlip(days, timeUntil.days);
-  animateFlip(hours, timeUntil.hours);
-  animateFlip(minutes, timeUntil.mins);
-  animateFlip(seconds, timeUntil.secs);
-
-  // remove one second
-  secondsUntil -= 1;
-
-  // display if the countdown has finished
-  if (secondsUntil < 0) {
-     clearInterval(clock);
-     document.getElementById('clock').innerHTML = 'Countdown Complete';
-  }
-}, 1000);
+init();
