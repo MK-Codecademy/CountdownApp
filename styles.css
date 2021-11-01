@@ -262,6 +262,7 @@ main {
   position: relative;
   flex-flow: column nowrap;
   width: 100vw;
+  text-transform: uppercase;
 }
 
 main h1 {
@@ -270,7 +271,6 @@ main h1 {
   margin: 19px 0 109px;
   letter-spacing: 8px;
   color: #fff;
-  text-transform: uppercase;
 }
 
 main.open {

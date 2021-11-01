@@ -1,4 +1,4 @@
-/* const calculateTimeUntil = (countdown) => {
+const calculateTimeUntil = (countdown) => {
   const currentDate = Date.now(); //get unix timestamp for current date/time)
   const countdownDate = Date.parse(countdown.date + ' ' + countdown.time) //get unix timestamp for countdown date/time
 
@@ -29,10 +29,10 @@ const convertSecondsToDays = (seconds) => {
 }
 
 // DOM elements for days, hours, mins and secs
-const daysEl = document.getElementsByClassName('days');
-const hoursEl = document.getElementsByClassName('hours');
-const minsEl = document.getElementsByClassName('minutes');
-const secsEl = document.getElementsByClassName('seconds');
+const days = document.querySelector('.days')
+const hours = document.querySelector('.hours')
+const minutes = document.querySelector('.minutes')
+const seconds = document.querySelector('.seconds')
 
 // ChristmasCountdown object for testing purposes
 const Christmas = {
@@ -44,17 +44,42 @@ const Christmas = {
 // get seconds from now until countdown date
 let secondsUntil = calculateTimeUntil(Christmas);
 
+
+function animateFlip(element, value) {
+
+  element.querySelector('.top-back span').innerText = value;
+  element.querySelector('.bottom-back span').innerText = value;
+
+
+  gsap.to(element.querySelector('.top'), 0.7, {
+      rotationX: '-180deg',
+      transformPerspective: 300,
+      ease: Quart.easeOut,
+      onComplete: function() {
+          element.querySelector('.top').innerText = value; 
+          element.querySelector('.bottom').innerText = value; 
+          gsap.set(element.querySelector('.top'), {rotationX: 0});
+      }
+  });
+
+  gsap.to(element.querySelector('.top-back'), 0.7, {
+      rotationX: 0,
+      transformPerspective: 300,
+      ease: Quart.easeOut,
+      clearProps: 'all'
+  });
+
+}
+
 // initiate clock
 const clock = setInterval(() => {
   const timeUntil = convertSecondsToDays(secondsUntil);
 
   // display clock in the DOM
-  for (let i = 0; i < daysEl.length; i++) {
-    daysEl[i].innerHTML = timeUntil.days;
-    hoursEl[i].innerHTML = timeUntil.hours;
-    minsEl[i].innerHTML = timeUntil.mins;
-    secsEl[i].innerHTML = timeUntil.secs;
-  }
+  animateFlip(days, timeUntil.days);
+  animateFlip(hours, timeUntil.hours);
+  animateFlip(minutes, timeUntil.mins);
+  animateFlip(seconds, timeUntil.secs);
 
   // remove one second
   secondsUntil -= 1;
@@ -65,4 +90,3 @@ const clock = setInterval(() => {
      document.getElementById('clock').innerHTML = 'Countdown Complete';
   }
 }, 1000);
- */
