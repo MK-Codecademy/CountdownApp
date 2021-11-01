@@ -280,40 +280,95 @@ main.open {
   align-self: center;
 }
 
-.count {
+.count-block {
   display: flex;
   flex-direction: column;
   color: hsl(345, 95%, 68%);
-  margin: 10vh 20px;
+  padding: 10vh 20px;
   font-size: 6em;
   font-weight: 300;
   text-align: center;
   letter-spacing: 0;
 }
 
-.bottom {
-  background-color: #33354d;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
+.c-title {
+  color: rgb(131, 133, 169);
+  font-size: 18px;
+  position: relative;
+  bottom: 25%;
 }
 
 .top {
   background-color: #2a2a41;
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
+  height: 8vh;
+  width: 12vw;
+  border-radius: 15px 15px 0 0;
+  position: relative;
 }
 
-.c-title {
-  color: rgb(131, 133, 169);
-  font-size: 18px;
+.bottom {
+  background-color: #33354d;
+  height: 8vh;
+  width: 12vw;
+  box-shadow: 0px 10px black;
+  border-radius: 0 0 15px 15px;
+  position: relative;
 }
 
-.back {
-  position: absolute;
+#line {
+  background:black;
+  height: 1px;
+  width:100%;    
+  position:absolute;
+  bottom: 0;
+  z-index: 1;
+  box-shadow: 0 0 20px 1px black;
 }
 
+#se {
+  background:black;
+  height:10px;
+  width:10px;    
+  position:absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px 0px 0px 0px;
+}
+
+#sw {
+  background:black;
+  height:10px;
+  width:10px;    
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 0px 20px 0px 0px;
+}
+
+#ne {
+  background:black;
+  height:10px;
+  width:10px;    
+  position:absolute;
+  right: 0;
+  top: 0;
+  border-radius: 0px 0px 0px 20px;
+}
+
+#nw {
+  background:black;
+  height:10px;
+  width:10px;    
+  position:absolute;
+  left: 0;
+  top: 0;
+  border-radius: 0px 0px 20px 0px;
+}
+
+.timer {
+  position: relative;
+  bottom: 47%;
+}
 
 
 /*#region Mobile page layout*/
