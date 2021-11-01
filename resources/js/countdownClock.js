@@ -1,4 +1,4 @@
-const calculateTimeUntil = (countdown) => {
+/* const calculateTimeUntil = (countdown) => {
   const currentDate = Date.now(); //get unix timestamp for current date/time)
   const countdownDate = Date.parse(countdown.date + ' ' + countdown.time) //get unix timestamp for countdown date/time
 
@@ -31,8 +31,8 @@ const convertSecondsToDays = (seconds) => {
 // DOM elements for days, hours, mins and secs
 const daysEl = document.getElementsByClassName('days');
 const hoursEl = document.getElementsByClassName('hours');
-const minsEl = document.getElementsByClassName('mins');
-const secsEl = document.getElementsByClassName('secs');
+const minsEl = document.getElementsByClassName('minutes');
+const secsEl = document.getElementsByClassName('seconds');
 
 // ChristmasCountdown object for testing purposes
 const Christmas = {
@@ -65,3 +65,4 @@ const clock = setInterval(() => {
      document.getElementById('clock').innerHTML = 'Countdown Complete';
   }
 }, 1000);
+ */

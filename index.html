@@ -33,76 +33,53 @@
     <!--The main section will hold the clock, header, etc-->
     <main id="main" class="open">
 
-      <div id="main-countdown-wrapper">
-        <h1>COUNTDOWN NAME</h1>
-        
-        <div class="count-blocks-wrapper">
+      <h1>We're launching soon</h1>
 
-          <div class="count-block">
-            <div class="front">
-              <div class="top">
-                <div id="se"></div>
-                <div id="sw"></div>
-                <div id="line"></div>
-              </div>
-              <div class="bottom">
-                <div id="ne"></div>
-                <div id="nw"></div>
-              </div>
-            </div>
-            <div class="timer days"></div>
-            <div class="c-title">Days</div>
-          </div>
+      <div class="countdown">
 
-          <div class="count-block">
-            <div class="front">
-              <div class="top">
-                <div id="se"></div>
-                <div id="sw"></div>
-                <div id="line"></div>
-              </div>
-              <div class="bottom">
-                <div id="ne"></div>
-                <div id="nw"></div>
-              </div>
-            </div>
-            <div class="timer hours"></div>
-            <div class="c-title">hours</div>
-          </div>
+        <div class="countdown-block">
+          <span class="days time-elem">
+            <span class="top"></span>
+            <span class="top-back"></span>
+            <span class="bottom"></span>
+            <span class="bottom-back"></span>
+          </span>
+          <span class="title">Days</span>
+        </div>
 
-          <div class="count-block">
-            <div class="front">
-              <div class="top">
-                <div id="se"></div>
-                <div id="sw"></div>
-                <div id="line"></div>
-              </div>
-              <div class="bottom">
-                <div id="ne"></div>
-                <div id="nw"></div>
-              </div>
-            </div>
-            <div class="timer mins"></div>
-            <div class="c-title">mins</div>
-          </div>
+        <div class="countdown-block">
+          <span class="hours time-elem">
+            <span class="top"></span>
+            <span class="top-back"></span>
+            <span class="bottom"></span>
+            <span class="bottom-back"></span>
+          </span>
+          <span class="title">Hours</span>
+        </div>
 
-          <div class="count-block">
-            <div class="front">
-              <div class="top">
-                <div id="se"></div>
-                <div id="sw"></div>
-                <div id="line"></div>
-              </div>
-              <div class="bottom">
-                <div id="ne"></div>
-                <div id="nw"></div>
-              </div>
-            </div>
-            <div class="timer secs"></div>
-            <div class="c-title">secs</div>
-          </div>
+        <div class="countdown-block">
+          <span class="minutes time-elem">
+            <span class="top"></span>
+            <span class="top-back"></span>
+            <span class="bottom"></span>
+            <span class="bottom-back"></span>
+          </span>
+          <span class="title">Minutes</span>
+        </div>
 
-      </div>
+        <div class="countdown-block">
+          <span class="seconds time-elem">
+            <span class="top"></span>
+            <span class="top-back"></span>
+            <span class="bottom"></span>
+            <span class="bottom-back"></span>
+          </span>
+          <span class="title">Seconds</span>
+        </div>
+
+    </div>
+
+
     </main>
   </div>
   
@@ -116,7 +93,6 @@
   </footer>
 
   <script src="./resources/js/flippingCountdown.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
   <script src="./resources/js/closeSidebar.js"></script>
   <script src="./resources/js/overlay.js"></script>
   <script src="./resources/js/countdownClock.js"></script>

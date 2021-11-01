@@ -1,4 +1,7 @@
 @import 'node_modules/modern-normalize/modern-normalize.css';
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
 
 /*Global styles*/
 * {
@@ -33,10 +36,6 @@ body {
 --white-text: hsl(0, 0%, 100%);
 }
 
-/* font */
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;700&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
-
 .font-RedHatText-400 {
   font-family: 'Red Hat Text', sans-serif;
   font-weight: 400;
@@ -66,7 +65,7 @@ aside {
   position: relative;
   transition: 0.8s;
   overflow-x: hidden;
-  z-index: 1;
+  z-index: 2;
 }
 
 aside.open {
@@ -81,6 +80,7 @@ aside .content {
   width: 50px;
   height: 50px;
   top: 15px;
+  z-index: 1;
 }
 .open-close-btn:hover {
   cursor: pointer;
@@ -90,6 +90,7 @@ aside .content {
   position: absolute;
   right: 15px;
 }
+
 #sidebar-close-btn:hover {
   right: 20px;
 }
@@ -252,124 +253,65 @@ border-radius: 10px;
 /*#region Main Countdown Area*/
 
 main {
-  width: 100vw;
   height: 100vh;
   transition: 0.8s;
-  overflow-x: hidden;
+  font: 700 14px/1 'Red Hat Text', sans-serif;
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 15vh;
+  position: relative;
+  flex-flow: column nowrap;
+  width: 100vw;
+}
+
+main h1 {
+  font: 700 14px/1 'Red Hat Text', sans-serif;
+  font-size: 1.5em;
+  margin: 19px 0 109px;
+  letter-spacing: 8px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 main.open {
   width: 65vw;
 }
-/*#endregion*/
 
-/* Main countdown */
-#main-countdown-wrapper {
-  margin-top: 15vh;
+.countdown {
+  font: 700 14px/1 'Red Hat Text', sans-serif;
   display: flex;
-  flex-direction: column;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 0.5em;
-  font-family: 'Red Hat Text', sans-serif;
+  flex-flow: row nowrap;
+  justify-content: center;
 }
 
-.count-blocks-wrapper {
+.countdown-block {
+  font: 700 14px/1 'Red Hat Text', sans-serif;
   display: flex;
-  flex-direction: row;
-  align-self: center;
+  flex-flow: column nowrap;
+  align-items: center;
+  margin-right: 30px;
 }
 
-.count-block {
-  display: flex;
-  flex-direction: column;
-  color: hsl(345, 95%, 68%);
-  padding: 10vh 20px;
-  font-size: 6em;
-  font-weight: 300;
-  text-align: center;
-  letter-spacing: 0;
-}
-
-.c-title {
-  color: rgb(131, 133, 169);
-  font-size: 18px;
+.time-elem {
+  font: 700 14px/1 'Red Hat Text', sans-serif;
+  box-sizing: border-box;
+  color: #fb6087;
   position: relative;
-  bottom: 25%;
-}
-
-.top {
-  background-color: #2a2a41;
-  height: 8vh;
-  width: 12vw;
-  border-radius: 15px 15px 0 0;
-  position: relative;
-}
-
-.bottom {
+  height: 140px;
+  width: 150px;
   background-color: #33354d;
-  height: 8vh;
-  width: 12vw;
-  box-shadow: 0px 10px black;
-  border-radius: 0 0 15px 15px;
-  position: relative;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 5.5em;
+  overflow: hidden;
+  margin-bottom: 27px;
+  line-height: 138px;
+  box-shadow: 0px 8px 0px 0px #16151d;
 }
 
-#line {
-  background:black;
-  height: 1px;
-  width:100%;    
-  position:absolute;
-  bottom: 0;
-  z-index: 1;
-  box-shadow: 0 0 20px 1px black;
-}
 
-#se {
-  background:black;
-  height:10px;
-  width:10px;    
-  position:absolute;
-  right: 0;
-  bottom: 0;
-  border-radius: 20px 0px 0px 0px;
-}
 
-#sw {
-  background:black;
-  height:10px;
-  width:10px;    
-  position:absolute;
-  left: 0;
-  bottom: 0;
-  border-radius: 0px 20px 0px 0px;
-}
-
-#ne {
-  background:black;
-  height:10px;
-  width:10px;    
-  position:absolute;
-  right: 0;
-  top: 0;
-  border-radius: 0px 0px 0px 20px;
-}
-
-#nw {
-  background:black;
-  height:10px;
-  width:10px;    
-  position:absolute;
-  left: 0;
-  top: 0;
-  border-radius: 0px 0px 20px 0px;
-}
-
-.timer {
-  position: relative;
-  bottom: 47%;
-}
-
+/*#endregion*/
 
 /*#region Mobile page layout*/
 @media screen and (max-width: 800px) {
